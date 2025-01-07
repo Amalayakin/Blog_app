@@ -1,0 +1,47 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.header-main{
+    width: 100vw;
+    height: 10vh;
+    display:flex;
+    justify-content: center;
+   
+}
+.navContainer{
+    width: 100%;
+    background-color: #539B6B;
+    display: flex;
+    justify-content: center;
+}
+
+.navlinkContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    
+}
+.navlinkContainer li{
+    margin: 2rem;
+}
+.navlinkContainer h1 {
+    margin-right: 2rem; /* Adds spacing between the title and navigation links */
+}
+/*footer styling*/
+.footer-container{
+    width: 100vw;
+    background-color: #539B6B;
+    height: 10vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+}
+.svgicons{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 20px;
+}
