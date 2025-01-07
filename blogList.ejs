@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs') %>
+<div class="overflow-div">
+    <div class="home-container">
+            <% for( let index=0; index < blogviews.length; index++ ) { %>
+                <div class="blog-card">
+                    <span class="blog-number">
+                        <%= index+ 1 %>
+                    </span>
+                    <h4>
+                        <%= blogviews[index].blogTitle %>
+                    </h4>
+                    <p>
+                        <%= blogviews[index].blogDis?.slice(0,300) %>
+                            <% if (blogviews[index].blogDis?.length> 299) { %> ...
+                                <a class="view-btn" href="/blogDetails/<%= blogviews[index].id %>">
+                                    View Blog</a>
+                                <% } %>
+                    </p>
+                    <div class="btn-wrapper">
+                        <form action="/delete/<%= blogviews[index].id %>" method="post">
+                            <button class="delete-btn">Delete</button>
+                            
+                        </form>
+                        <a class="edit-btn" href="/edit/<%=  blogviews[index].id %>">edit</a>
+                    </div>
+                </div>
+                <% } %>
+                    
+    </div>
+</div>
+<%- include('partials/footer.ejs') %>
+
